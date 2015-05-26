@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+require 'sass'
+require 'pathname'
+
+class SCSSProcessor
+  SCSS_FILE = "./_master.scss"
+  OUTPUT_FILE = "~/Documents/Anki/e/collection.media/_master.css"
+
+  def self.run
+    Sass.compile_file(SCSS_FILE, css_output_file)
+  end
+
+  private
+
+  def self.css_output_file
+    Pathname.new(OUTPUT_FILE).expand_path
+  end
+end
+
+if $0 == __FILE__ then
+  SCSSProcessor.run
+end

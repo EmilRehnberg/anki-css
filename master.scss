@@ -1,0 +1,313 @@
+// Basic Mixins
+@mixin bold { font-weight: bold; }
+@mixin center { text-align: center; }
+@mixin code-background-color { background-color: #222222; }
+@mixin colon-content { content: "："; }
+@mixin inline-display { display: inline; }
+@mixin left { text-align: left; }
+@mixin monospace { font-family: Courier, monospace; }
+@mixin no-float { float: none; }
+@mixin right { text-align: right; }
+@mixin scaled-margins($marginScale) {
+  margin-top: #{$marginScale}em;
+  margin-bottom: #{$marginScale}em;
+}
+@mixin underline { text-decoration: underline; }
+
+// font-size
+@mixin code-font-size { font-size: 0.6em; }
+@mixin midsize-font { font-size: 1em; }
+@mixin slightly-smaller-font { font-size: 0.85em; }
+@mixin small-font { font-size: 0.7em; }
+@mixin large-font { font-size: 1.25em; }
+@mixin tiny-font { font-size: 0.5em; }
+
+// normalization mixins
+@mixin normal-style {
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+}
+@mixin no-margin {
+  margin: 0;
+}
+@mixin no-margin-padding {
+  @include no-margin;
+  padding: 0px;
+}
+
+// color mixins
+@mixin blue { color: dodgerblue; }
+@mixin brown { color: chocolate; }
+@mixin darkgrey { color: #606060; }
+@mixin green { color: limegreen; }
+@mixin grey { color: grey; }
+@mixin purple { color: darkorchid; }
+@mixin red { color: red; }
+@mixin yellow { color: yellow; }
+
+// contrast mixins
+@mixin contrast1 {
+  color: yellow;
+  background-color: green;
+}
+@mixin contrast2 {
+  color: orange;
+  background-color: blue;
+}
+@mixin contrast3 {
+  @include red;
+  background-color: yellow;
+}
+@mixin contrast4 {
+  color: blue;
+  background-color: cyan;
+}
+
+// combined mixins
+@mixin no-style-brown {
+  @include normal-style;
+  @include brown;
+}
+
+@mixin codelike {
+  @include monospace;
+  @include left;
+  @include code-background-color;
+}
+
+@mixin preformatted-block {
+  @include code-background-color;
+  @include code-font-size;
+  @include no-margin-padding;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+}
+
+// HTML tags
+i { @include no-style-brown; }
+
+del {
+  @include grey;
+  @include normal-style;
+}
+
+sub {
+  @include purple;
+  @include tiny-font;
+}
+
+kbd {
+  @include contrast2;
+}
+
+var {
+  @include monospace;
+  @include code-background-color;
+  @include normal-style;
+  color: navajowhite;
+  font-size: 0.8em;
+}
+
+// division tags
+div.centered { @include center } // 中心
+div.long-question { @include center } // 長くな質問
+div.short-question { // 短くな質問
+  color: darkorange;
+  @include bold;
+  @include underline;
+}
+
+div.command-explanation { // コッマンド説明
+  @include monospace;
+  @include small-font;
+  @include purple;
+}
+
+// Bold tags
+b {
+  @include normal-style;
+  @include yellow;
+}
+
+b.alt {
+  @include normal-style;
+  @include contrast2;
+}
+
+b.alt2 {
+  @include normal-style;
+  @include contrast3;
+}
+
+b.alt3 {
+  @include normal-style;
+  @include contrast4;
+}
+
+// Headers
+h1 {
+  @include scaled-margins(0.4);
+  @include no-style-brown;
+}
+h2 {
+  @include scaled-margins(0.3);
+  @include no-style-brown;
+}
+h3 {
+  @include scaled-margins(0.2);
+  @include no-style-brown;
+}
+h4 {
+  @include scaled-margins(0.1);
+  @include no-style-brown;
+}
+h6 {
+  @include no-margin;
+  @include normal-style;
+  @include purple;
+}
+h6:before {
+  @include darkgrey;
+  content: "文脈：";
+}
+
+// Lists
+ul { @include scaled-margins(0.2); }
+ol { @include scaled-margins(0.2); }
+
+// detailed lists
+dl { @include scaled-margins(0.1); }
+dl.with-fields dt {
+  @include grey;
+  @include small-font;
+}
+dt {
+  @include normal-style;
+  @include green;
+}
+dl dt#onyomi { // 音読み
+  @include brown;
+  @include midsize-font;
+}
+dl dt#kunyomi { // 訓読み
+  @include blue;
+  @include midsize-font;
+}
+dl dd#wrong-reading { @include darkgrey; } // 違い読み
+
+hl {
+  @include large-font;
+  @include red;
+  @include underline;
+}
+
+.stack dt, .stack dd {
+  @include no-float;
+  @include inline-display;
+  @include no-margin-padding;
+}
+.stack dd dt { @include yellow; }
+.stack dt:after { @include colon-content; }
+.stack dd:after {
+  content: "\a";
+  white-space: pre;
+}
+
+.compact dt {
+  @include no-float;
+  @include inline-display;
+  clear: none;
+  margin-left: 1em;
+}
+
+.compact dd {
+  @include no-float;
+  @include inline-display;
+  margin: 0.2em;
+}
+.compact dd:after { content:""; }
+.compact dt:after { @include colon-content; }
+#onyomi-imports dt { color: darkred; } // 種類音読み
+
+// Figures
+figure {
+  @include no-margin;
+  @include no-float;
+}
+figure img { display: table; }
+figcaption {
+  @include small-font;
+  position: static;
+}
+
+// span tags
+span.comment { @include grey }
+span.error { @include red } // エッラー
+span.reading-no { @include green } // 読みの数
+span#onyomi { @include brown } // 音読み
+span#kunyomi { @include blue } // 訓読み
+
+span.correct-answer { // 正解
+  @include underline;
+  @include large-font;
+  @include green;
+}
+
+span.correct-japanese { // 正解日本語
+  font: osaka, minchin;
+  @include large-font;
+  @include green;
+}
+
+// Table related tags
+table {
+  @include monospace;
+  border-collapse: collapse;
+}
+
+th {
+  @include contrast3;
+  @include normal-style;
+  @include right;
+  padding: 0.16em 0em 0em 0.3em;
+  border: 1px solid black;
+}
+
+td {
+  @include normal-style;
+  @include center;
+  padding: 0.16em 0.3em 0em 0.3em; // top, right, bottom & left padding
+  border: 1px solid yellow;
+}
+
+caption {
+  @include bold;
+  color: cyan;
+}
+
+// code related tags
+code { @include codelike; }
+code pre { @include preformatted-block; }
+
+// sample output tag
+samp {
+  @include codelike;
+  @include grey;
+}
+samp pre { @include preformatted-block; }
+
+// classes
+.card {
+  @include left;
+  font-family: arial;
+  font-size: 26px;
+  color: white;
+  background-color: black;
+}
+
+.cloze {
+  @include bold;
+  @include blue;
+}
