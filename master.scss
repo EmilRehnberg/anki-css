@@ -119,12 +119,6 @@ div.short-question { // 短くな質問
   @include underline;
 }
 
-div.command-explanation { // コッマンド説明
-  @include monospace;
-  @include small-font;
-  @include purple;
-}
-
 // Bold tags
 b {
   @include normal-style;
