@@ -87,6 +87,7 @@
 
 // HTML tags
 i { @include no-style-brown; }
+summary { color: DarkGoldenRod; }
 
 del {
   @include grey;
