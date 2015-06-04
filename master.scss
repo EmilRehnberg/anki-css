@@ -194,8 +194,7 @@ dl dd#wrong-reading { @include darkgrey; } // 違い読み
 
 hl {
   @include large-font;
-  @include red;
-  @include underline;
+  color: tomato;
 }
 
 .stack dt, .stack dd {
