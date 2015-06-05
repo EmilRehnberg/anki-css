@@ -42,6 +42,7 @@
 @mixin darkgrey { color: #606060; }
 @mixin green { color: limegreen; }
 @mixin grey { color: grey; }
+@mixin lightgrey { color: darkgrey; } // in terms of light lightgrey > darkgrey > grey, dunno why
 @mixin purple { color: darkorchid; }
 @mixin red { color: red; }
 @mixin yellow { color: yellow; }
@@ -172,16 +173,36 @@ h6:before {
 ul { @include scaled-margins(0.2); }
 ol { @include scaled-margins(0.2); }
 
-// detailed lists
+//
+// detailed lists styling
+//
 dl { @include scaled-margins(0.1); }
 dl.with-fields dt {
   @include grey;
   @include small-font;
 }
+
+// dt tags styling
 dt {
   @include normal-style;
   @include green;
 }
+dl.dialogue dt { @include grey; }
+dl.stack dt {
+  @include no-float;
+  @include inline-display;
+  @include no-margin-padding;
+}
+dl.stack dd dt { @include yellow; }
+dl.stack dt:after { @include colon-content; }
+dl.compact dt {
+  @include no-float;
+  @include inline-display;
+  clear: none;
+  margin-left: 1em;
+}
+dl.compact dt:after { @include colon-content; }
+dl#onyomi-imports dt { color: darkred; } // 種類音読み
 dl dt#onyomi { // 音読み
   @include brown;
   @include midsize-font;
@@ -190,40 +211,38 @@ dl dt#kunyomi { // 訓読み
   @include blue;
   @include midsize-font;
 }
+
+// dd tags styling
+dl.dialogue dd { margin: 0 0 0 0.2em; }
+dl.dialogue dd:after {
+  content: "」";
+  @include darkgrey;
+}
+dl.dialogue dd:before {
+  content: "「";
+  @include darkgrey;
+}
+dl.stack dd {
+  @include no-float;
+  @include inline-display;
+  @include no-margin-padding;
+}
+dl.stack dd:after {
+  content: "\a";
+  white-space: pre;
+}
+dl.compact dd {
+  @include no-float;
+  @include inline-display;
+  margin: 0.2em;
+}
+dl.compact dd:after { content:""; }
 dl dd#wrong-reading { @include darkgrey; } // 違い読み
 
 hl {
   @include large-font;
   color: tomato;
 }
-
-.stack dt, .stack dd {
-  @include no-float;
-  @include inline-display;
-  @include no-margin-padding;
-}
-.stack dd dt { @include yellow; }
-.stack dt:after { @include colon-content; }
-.stack dd:after {
-  content: "\a";
-  white-space: pre;
-}
-
-.compact dt {
-  @include no-float;
-  @include inline-display;
-  clear: none;
-  margin-left: 1em;
-}
-
-.compact dd {
-  @include no-float;
-  @include inline-display;
-  margin: 0.2em;
-}
-.compact dd:after { content:""; }
-.compact dt:after { @include colon-content; }
-#onyomi-imports dt { color: darkred; } // 種類音読み
 
 // Figures
 figure {
