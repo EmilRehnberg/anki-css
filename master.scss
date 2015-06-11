@@ -323,4 +323,6 @@ samp pre { @include preformatted-block; }
 .cloze {
   @include bold;
   @include blue;
+  background-color: #500;
 }
+
