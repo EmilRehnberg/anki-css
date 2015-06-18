@@ -311,6 +311,7 @@ caption {
 
 // code related tags
 code { @include codelike; }
+code.path { color: cyan; }
 code pre { @include preformatted-block; }
 
 // sample output tag
