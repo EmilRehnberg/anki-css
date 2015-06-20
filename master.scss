@@ -87,7 +87,13 @@
 }
 
 // HTML tags
+a { @include blue; }
+aside.column { @include center; }
+header.column { @include center; }
 i { @include no-style-brown; }
+kbd { @include contrast2; }
+nav { @include center; }
+section.column { @include center; }
 summary { color: DarkGoldenRod; }
 
 del {
@@ -98,10 +104,6 @@ del {
 sub {
   @include purple;
   @include tiny-font;
-}
-
-kbd {
-  @include contrast2;
 }
 
 var {
@@ -143,6 +145,7 @@ b.alt3 {
 }
 
 // Headers
+header.column { @include center; }
 h1 {
   @include scaled-margins(0.4);
   @include no-style-brown;
