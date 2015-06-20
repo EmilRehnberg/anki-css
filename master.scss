@@ -112,10 +112,10 @@ var {
   font-size: 0.8em;
 }
 
-// division tags
-div.centered { @include center } // 中心
-div.long-question { @include center } // 長くな質問
-div.short-question { // 短くな質問
+// paragraph tags
+p { @include no-margin; }
+p.long-question { @include center } // 長くな質問
+p.short-question { // 短くな質問
   color: darkorange;
   @include bold;
   @include underline;
