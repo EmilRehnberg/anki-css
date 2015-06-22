@@ -47,6 +47,7 @@
 @mixin lightgrey { color: darkgrey; } // in terms of light lightgrey > darkgrey > grey, dunno why
 @mixin purple { color: darkorchid; }
 @mixin red { color: red; }
+@mixin white { color: white; }
 @mixin yellow { color: yellow; }
 
 // contrast mixins
