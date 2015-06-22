@@ -13,6 +13,8 @@
   margin-bottom: #{$marginScale}em;
 }
 @mixin underline { text-decoration: underline; }
+@mixin solid-yell-top-border { border-top: 3px solid turquoise; }
+@mixin solid-yell-left-border { border-left: 3px solid turquoise; }
 
 // font-size
 @mixin code-font-size { font-size: 0.6em; }
@@ -291,6 +293,10 @@ table {
   @include monospace;
   border-collapse: collapse;
 }
+table.small { @include tiny-font; }
+tr.total { @include solid-yell-top-border; }
+th.total { @include solid-yell-left-border; }
+td.total { @include solid-yell-left-border; }
 
 th {
   @include contrast3;
