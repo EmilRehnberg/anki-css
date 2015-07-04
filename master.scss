@@ -297,15 +297,11 @@ caption {
 }
 
 // code related tags
-code { @include codelike; }
-code pre { @include preformatted-block; }
-
-// sample output tag
+code, samp { @include codelike; }
+code pre, samp pre { @include preformatted-block; }
 samp {
-  @include codelike;
   @include grey;
 }
-samp pre { @include preformatted-block; }
 
 // classes
 .card {
