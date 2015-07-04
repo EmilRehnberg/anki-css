@@ -274,8 +274,7 @@ table {
 }
 table.small { @include tiny-font; }
 tr.total { @include solid-yell-top-border; }
-th.total { @include solid-yell-left-border; }
-td.total { @include solid-yell-left-border; }
+th.total, td.total { @include solid-yell-left-border; }
 
 th {
   @include contrast3;
