@@ -153,22 +153,11 @@ b.alt3 {
 
 // Headers
 header.column { @include center; }
-h1 {
-  @include scaled-margins(0.4);
-  @include no-style-brown;
-}
-h2 {
-  @include scaled-margins(0.3);
-  @include no-style-brown;
-}
-h3 {
-  @include scaled-margins(0.2);
-  @include no-style-brown;
-}
-h4 {
-  @include scaled-margins(0.1);
-  @include no-style-brown;
-}
+h1 { @include scaled-margins(0.4); }
+h2 { @include scaled-margins(0.3); }
+h3 { @include scaled-margins(0.2); }
+h4 { @include scaled-margins(0.1); }
+h1, h2, h3, h4 { @include no-style-brown; }
 h6 {
   @include no-margin;
   @include normal-style;
