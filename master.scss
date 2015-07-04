@@ -131,25 +131,11 @@ p.short-question { // 短くな質問
 }
 
 // Bold tags
-b {
-  @include normal-style;
-  @include yellow;
-}
-
-b.alt {
-  @include normal-style;
-  @include contrast2;
-}
-
-b.alt2 {
-  @include normal-style;
-  @include contrast3;
-}
-
-b.alt3 {
-  @include normal-style;
-  @include contrast4;
-}
+b, b.alt, b.alt2, b.alt3 { @include normal-style; }
+b { @include yellow; }
+b.alt { @include contrast2; }
+b.alt2 { @include contrast3; }
+b.alt3 { @include contrast4; }
 
 // Headers
 header.column { @include center; }
