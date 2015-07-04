@@ -137,6 +137,26 @@ b.alt { @include contrast2; }
 b.alt2 { @include contrast3; }
 b.alt3 { @include contrast4; }
 
+// blockquote
+blockquote {
+  @include orange;
+  border-left: 3px solid #555;
+  margin: 0.5em 10px;
+  padding: 0.2em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote footer cite { color: darkorange; }
+blockquote footer cite:before { content: "\2009 \2014 \2009"; }
+blockquote p { display: inline; }
+blockquote p:before {
+  @include red;
+  content: open-quote;
+}
+blockquote p:after {
+  @include red;
+  content: close-quote;
+}
+
 // Headers
 header.column { @include center; }
 h1 { @include scaled-margins(0.4); }
