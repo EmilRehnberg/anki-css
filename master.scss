@@ -45,6 +45,7 @@
 @mixin green { color: limegreen; }
 @mixin grey { color: grey; }
 @mixin lightgrey { color: darkgrey; } // in terms of light lightgrey > darkgrey > grey, dunno why
+@mixin orange { color: orange; }
 @mixin purple { color: darkorchid; }
 @mixin red { color: red; }
 @mixin white { color: white; }
@@ -56,7 +57,7 @@
   background-color: green;
 }
 @mixin contrast2 {
-  color: orange;
+  @include orange;
   background-color: blue;
 }
 @mixin contrast3 {
