@@ -137,6 +137,10 @@ b.alt { @include contrast2; }
 b.alt2 { @include contrast3; }
 b.alt3 { @include contrast4; }
 
+// Quote tags
+q.ja { quotes: "「" "」""『""』"; }
+q.ja:before, q.ja:after { color: aquamarine; }
+
 // blockquote
 blockquote {
   @include orange;
