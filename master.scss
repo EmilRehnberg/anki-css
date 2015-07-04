@@ -93,13 +93,11 @@
 
 // HTML tags
 a { @include blue; }
-aside.column { @include center; }
-header.column { @include center; }
 i { @include no-style-brown; }
 kbd { @include contrast2; }
-nav { @include center; }
-section.column { @include center; }
 summary { color: DarkGoldenRod; }
+
+aside.column, header.column, nav, section.column { @include center; }
 
 del {
   @include grey;
