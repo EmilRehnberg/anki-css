@@ -110,10 +110,12 @@ sub {
 }
 
 var {
-  @include monospace;
-  @include code-background-color;
   @include normal-style;
   color: navajowhite;
+}
+var.code {
+  @include monospace;
+  @include code-background-color;
   font-size: 0.8em;
 }
 var.path {
