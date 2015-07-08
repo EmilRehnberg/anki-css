@@ -105,6 +105,11 @@ del {
   @include normal-style;
 }
 
+dfn {
+  font-size: 1.1em;
+  color: LawnGreen;
+}
+
 sub {
   @include purple;
   @include tiny-font;
