@@ -42,6 +42,7 @@
 @mixin blue { color: dodgerblue; }
 @mixin brown { color: chocolate; }
 @mixin darkgrey { color: #606060; }
+@mixin gold { color: #AA0; }
 @mixin green { color: limegreen; }
 @mixin grey { color: grey; }
 @mixin lightgrey { color: darkgrey; } // in terms of light lightgrey > darkgrey > grey, dunno why
@@ -127,10 +128,11 @@ var.code {
   @include code-background-color;
   font-size: 0.8em;
 }
-var.path {
-  color: cyan;
-  font-size: 1em;
-}
+var.character { @include gold; }
+var.entity { color: LightGreen; }
+var.location { color: LightSkyBlue; }
+var.path { color: Cyan; }
+var.person { color: MediumSpringGreen; }
 
 // paragraph tags
 p { @include no-margin; }
