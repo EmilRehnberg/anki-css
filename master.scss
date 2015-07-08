@@ -115,6 +115,9 @@ sub {
   @include tiny-font;
 }
 
+cite, cite.ja { color: crimson; }
+cite.ja { @include normal-style; }
+
 var {
   @include normal-style;
   color: navajowhite;
