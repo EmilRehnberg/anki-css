@@ -132,7 +132,7 @@ var.code {
   font-size: 0.8em;
 }
 var.character { @include gold; }
-var.entity { color: LightGreen; }
+var.entity { @include entity-color; }
 var.location { color: LightSkyBlue; }
 var.path { color: Cyan; }
 var.person { color: MediumSpringGreen; }
