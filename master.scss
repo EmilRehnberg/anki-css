@@ -52,6 +52,8 @@
 @mixin white { color: white; }
 @mixin yellow { color: yellow; }
 
+@mixin entity-color { color: LightGreen; }
+
 // contrast mixins
 @mixin contrast1 {
   color: yellow;
@@ -94,6 +96,7 @@
 
 // HTML tags
 a { @include blue; }
+abbr { @include entity-color; }
 i { @include no-style-brown; }
 kbd { @include contrast2; }
 summary { color: DarkGoldenRod; }
