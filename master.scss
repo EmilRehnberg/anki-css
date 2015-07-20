@@ -354,8 +354,7 @@ samp {
 }
 
 .cloze {
-  @include bold;
-  @include blue;
-  background-color: #500;
+  @include orange;
+  background-color: indigo;
 }
 
