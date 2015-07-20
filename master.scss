@@ -98,6 +98,7 @@
 a { @include blue; }
 abbr { @include entity-color; }
 i { @include no-style-brown; }
+img { background-color: White; }
 kbd { @include contrast2; }
 summary { color: DarkGoldenRod; }
 time { color: Fuchsia; }
