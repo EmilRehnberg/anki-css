@@ -118,6 +118,11 @@ i {
   color: Chartreuse;
 }
 
+input {
+  @include center;
+  @include scaled-size(2);
+}
+
 sub {
   @include purple;
   @include tiny-font;
