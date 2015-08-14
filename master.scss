@@ -97,12 +97,10 @@
 
 // HTML tags
 a { @include blue; }
-i { @include no-style-brown; }
 img { background-color: White; }
 kbd { @include contrast2; }
 summary { color: DarkGoldenRod; }
 time { color: Fuchsia; }
-
 aside.column, header.column, nav, section.column { @include center; }
 
 del {
@@ -113,6 +111,11 @@ del {
 dfn {
   font-size: 1.1em;
   color: LawnGreen;
+}
+
+i {
+  @include normal-style;
+  color: Chartreuse;
 }
 
 sub {
