@@ -126,6 +126,14 @@ sub {
 cite, cite.ja { color: crimson; }
 cite.ja { @include normal-style; }
 
+pre.code-comment {
+  @include preformatted-block;
+  color: violet;
+  background-color: #000;
+}
+pre.small { @include scaled-size(0.52); }
+pre.tiny { @include scaled-size(0.28); }
+
 var {
   @include normal-style;
   color: navajowhite;
