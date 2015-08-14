@@ -4,7 +4,7 @@ require 'sass'
 require 'pathname'
 
 class SCSSProcessor
-  SCSS_FILES = ["./master.scss", "./abbreviations.scss"]
+  SCSS_FILES = ["./master.scss", "./abbreviations.scss", "./japanese-word-definitions.scss"]
   OUTPUT_FILE = "~/Documents/Anki/e/collection.media/_master.css"
   TMP_CONCAT_FILE = "/tmp/concatenated_anki.scss"
 
