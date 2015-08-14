@@ -111,11 +111,6 @@ del {
   @include normal-style;
 }
 
-dfn {
-  font-size: 1.1em;
-  color: LawnGreen;
-}
-
 i {
   @include normal-style;
   color: Chartreuse;
@@ -138,6 +133,17 @@ u {
 
 cite, cite.ja { color: crimson; }
 cite.ja { @include normal-style; }
+
+dfn {
+  @include normal-style;
+  color: LawnGreen;
+  white-space:pre-wrap;
+}
+dfn:after {
+  content: attr(id);
+  color: Khaki;
+}
+dfn:before { @include orange; }
 
 pre.code-comment {
   @include preformatted-block;
@@ -259,6 +265,7 @@ dt {
   @include green;
 }
 dl.dialogue dt { @include grey; }
+dl.dialogue dfn:after { @include grey; }
 dl.stack dt {
   @include no-float;
   @include inline-display;
