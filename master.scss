@@ -17,6 +17,7 @@
 @mixin solid-yell-left-border { border-left: 3px solid turquoise; }
 
 // font-size
+@mixin scaled-size($sizeScale) { font-size: #{$sizeScale}em; }
 @mixin code-font-size { font-size: 0.6em; }
 @mixin midsize-font { font-size: 1em; }
 @mixin slightly-smaller-font { font-size: 0.85em; }
