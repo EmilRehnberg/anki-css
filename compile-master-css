@@ -5,13 +5,15 @@ require 'pathname'
 
 class SCSSProcessor
   SCSS_FILES = ["./master.scss", "./abbreviations.scss", "./japanese-word-definitions.scss"]
-  OUTPUT_FILE = "~/Documents/Anki/e/collection.media/_master.css"
+  OUTPUT_DIR = Pathname.new("~/Documents/Anki/e/collection.media").expand_path
+  OUTPUT_FILENAME_BASE = "_master"
   TMP_CONCAT_FILE = "/tmp/concatenated_anki.scss"
 
   def self.run
     build_concatenated_scss_file
     begin
-      Sass.compile_file(TMP_CONCAT_FILE, css_output_file)
+      rm_old_css
+      compile_sass_files
     ensure
       clean_up
     end
@@ -29,12 +31,34 @@ class SCSSProcessor
     end
   end
 
-  def self.css_output_file
-    Pathname.new(OUTPUT_FILE).expand_path
+  def self.rm_old_css
+    Dir.glob(anki_css_filepath("-*")).each do |path|
+      File.delete(path)
+    end
+  end
+
+  def self.compile_sass_files
+    [master_css_output_filepath, master_time_tagged_css_output_filepath].each do |output_filepath|
+      Sass.compile_file(TMP_CONCAT_FILE, output_filepath)
+    end
   end
 
   def self.clean_up
     File.delete(TMP_CONCAT_FILE)
+  end
+
+  def self.master_css_output_filepath
+    anki_css_filepath
+  end
+
+  def self.master_time_tagged_css_output_filepath
+    current_secs = Time.new.to_i
+    puts current_secs
+    anki_css_filepath("-#{current_secs}")
+  end
+
+  def self.anki_css_filepath(filepath_append = "")
+    OUTPUT_DIR + (OUTPUT_FILENAME_BASE + "#{filepath_append}.css")
   end
 end
 
