@@ -1,4 +1,14 @@
-@import "person-names", "words-a", "words-ka", "words-ga", "words-sa", "words-za", "words-ta", "words-da", "words-na", "words-ha", "words-ba", "words-pa", "words-ma", "words-ya", "words-ra", "words-wa";
+@import "person-names",
+  "words-a",
+  "words-ka", "words-ga",
+  "words-sa", "words-za",
+  "words-ta", "words-da",
+  "words-na",
+  "words-ha", "words-ba", "words-pa",
+  "words-ma",
+  "words-ya",
+  "words-ra",
+  "words-wa";
 
 // use a map of maps as lists can not contain proper maps
 $wordsets: (
