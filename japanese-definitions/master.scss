@@ -1,14 +1,6 @@
-@import "person-names", "words-a", "words-ka", "words-ga", "words-sa", "words-za", "words-ta", "words-da", "words-na", "words-ha", "words-ba", "words-pa";
+@import "person-names", "words-a", "words-ka", "words-ga", "words-sa", "words-za", "words-ta", "words-da", "words-na", "words-ha", "words-ba", "words-pa", "words-ma";
 
 $words: (
-  貧しさ: (まずしさ,財産や金銭がとぼしく、生活が苦しい；乏しい；必要量に足りない,"poverty"),
-  真に受ける: (まにうける,"take seriously","take seriously"),
-  見事1: (みごと,すばらしいこと,"excellent; splendid; fine; supurb; admirable"),
-  見事2: (みごと,完全に,"completely; proper; real"),
-  見つかる: (みつかる,null,"be found"),
-  民族: (みんぞく,言語・人種・文化・歴史的運命を共有し、同族意識によって結ばれた人々の集団,"nationality"),
-  息子: (むすこ,null,null),
-  申し訳: (もうしわけ,null,null),
   悠久: (ゆうきゅう,永遠,"eternity"),
   優秀: (ゆうしゅう,非常にすぐれていること,"excellence;superiority"),
   故に: (ゆえに,null,null),
@@ -37,6 +29,7 @@ $wordsets: (
   ha: $ha,
   ba: $ba,
   pa: $pa,
+  ma: $ma,
   words: $words
 );
 @each $set-name, $set-data in $wordsets {
