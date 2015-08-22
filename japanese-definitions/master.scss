@@ -1,45 +1,6 @@
-@import "person-names", "words-a";
+@import "person-names", "words-a", "words-ka";
 
 $words: (
-  快挙: (かいきょ,胸のすくような、すばらしい行為。痛快な行動。,"a splendid [heroic] achievement"),
-  開催: (かいさい, 集会や催し物を開き行うこと,"holding (of an event), opening"),
-  改造: (かいぞう,改装,"remodeling; reshuffle"),
-  変える: (かえる,変化する,"change"),
-  覚醒剤: (かくせいざい,例えばアンフェタミン,"Awakening Drug, stimulant (e.g. meth-, ampetamine)"),
-  閣僚: (かくりょう,ミニスター,"minister"),
-  過去: (かこ,前のこと,"past"),
-  勝手: (かって,他人のことはかまわないで、自分だけに都合がよいように振る舞うこと。「そんな-は許さない」,"selfishness; own convenience"),
-  可能性: (かのうせい,物事が実現できる見込み。,possibility),
-  機会: (きかい,事をするのに最も都合のよい時機。ちょうどよい折。チャンス。,"a chance, an opportunity"),
-  聞く: (きく,null,null),
-  危険: (きけん,null,"danger"),
-  寄生: (きせい,生物の寄生。(スル)人に頼って暮らすこと,"parasitism; (スル) be parasitic"),
-  機銃: (きじゅう,機の銃,"machine gun"),
-  決める: (きめる,null,null),
-  教育: (きょういく,訓練；教えること,"education"),
-  凶器: (きょうき,人を殺傷するために用いられる道具,"a (lethal) weapon"),
-  強要: (きょうよう,無理に要求すること。無理やりさせようとすること。,"extortion; coercion; strong persuation"),
-  謹慎: (きんしん,null,"penitence, discipline, house arrest"),
-  謹慎処分: (null, "discipline罰",null),
-  悔い改める: (くいあらためる,過去の過ちを反省して心がけを変える。,"repent; is sorry for"),
-  空間: (くうかん,スペース；宇宙,null),
-  繰り返す: (くりかえす,null,null),
-  警戒: (けいかい,null,"warning, caution"),
-  継続1: (けいぞく,そのまま続くこと,"continuation (of)"),
-  継続2: (けいぞく,中断してはまた続くこと,"(〜に) continual(ly)"),
-  結果: (けっか,null,"result; outcome"),
-  県警: (けんけい,県の警察,"prefecture police"),
-  健康: (けんこう,体の状態,"health"),
-  請う: (こう,他人に、物を与えてくれるよう求める。訊く,"ask; inquire"),
-  肯定: (こうてい,そうだと言うこと。認めりこと,"affirmation; acknowledgement"),
-  国産: (こくさん,null,"domestic manifacturing"),
-  告発: (こくはつ,悪事や不正を明らかにして、世間に知らせること。告訴。訴え,"a formal charge [accusation]((against))"),
-  越す: (こす,来る,"come over (here to e.g. the hospital)"),
-  骨頂: (こっちょう,程度がこれ以上ないこと。,"pinnacle"),
-  子供: (こども,null,null),
-  この間: (このかん,null,"during this time"),
-  殺す: (ころす,null,null),
-  今後: (こんご,null,"future"),
   学科: (がっか,科目。課程。,"department"),
   がっかり: (null, 元気を出せ・失望する様子, "disappointed"),
   疑惑: (ぎわく,疑い；ダウト,null),
@@ -194,6 +155,7 @@ $words: (
 // use a map of maps as lists can not contain proper maps
 $wordsets: (
   a: $a,
+  ka: $ka,
   words: $words
 );
 @each $set-name, $set-data in $wordsets {
