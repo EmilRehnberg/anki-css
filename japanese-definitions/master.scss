@@ -1,23 +1,6 @@
-@import "person-names", "words-a", "words-ka", "words-ga", "words-sa", "words-za", "words-ta", "words-da", "words-na";
+@import "person-names", "words-a", "words-ka", "words-ga", "words-sa", "words-za", "words-ta", "words-da", "words-na", "words-ha";
 
 $words: (
-  発見: (はっけん,見付かれ,"discovery"),
-  引き離す: (ひきはなす,分ける・引っ張って離す。無理に離れさせる,"pull from (someone or something)"),
-  被疑者: (ひぎしゃ,犯罪の嫌疑を受けて捜査の対象となっているが、起訴されていない者, "suspect"),
-  表彰: (ひょうしょう,善行・功績などを人々の前に明らかにし、ほめたたえること。,"commendation; 表彰する：to award"),
-  披露: (ひろう,手紙・文書などを開いて人に見せること。広く人に知らせること,"showcase, exhibition"),
-  不正: (ふせい,正しくないこと。正義に反する。道義に反する。法律に反する。,"injustice; unjust; dishonest; unlawful; illegal"),
-  普通: (ふつう,特に変わっていないこと。；通常,"usual; common"),
-  不当: (ふとう,正当・適当でないこと,null),
-  弊害: (へいがい,害になること。他に悪い影響を与える物事,null),
-  変化: (へんか,変わり,"change"),
-  放課後: (ほうかご,学校でその日の授業が終わったあと,"after school"),
-  報告: (ほうこく,告げ知らせること。レポート。情報。,"report"),
-  報酬: (ほうしゅう,労務または物の使用の対価として給付される金銭・物品など。報奨。給料。医師・弁護士などの,"reward; pay; compensation; (doctor or lawyer) fee"),
-  方針: (ほうしん,方向；方策；計画；方位を示す磁石の針。磁針。,"course; policy; plan"),
-  放題: (ほうだい,常軌を逸していること。自由勝手にふるまうこと。,"without reserve; as much as one likes; all-you-can-..."),
-  捕捉: (ほそく,キャプチャー・つかむこと, "capture, seizure"),
-  本部: (ほんぶ,null,"HQ"),
   売春: (ばいしゅん,女性が報酬を得ることを目的として不特定の相手と性交すること。売淫。売色。売笑。,"prostitution"),
   分権: (ぶんけん,権力を1か所に集中しないで、分散すること。「地方ー」反：集権。,"splitting"),
   文明: (ぶんめい,人知が進んで世の中が開け、精神的、物質的に生活が豊かになった状態。特に、宗教・道徳・学問・芸術などの精神的な文化に対して、技術・機械の発達や社会制度の整備などによる経済的・物質的文化をさす。；シビリゼーション,"civilization"),
@@ -57,6 +40,7 @@ $wordsets: (
   ta: $ta,
   da: $da,
   na: $na,
+  ha: $ha,
   words: $words
 );
 @each $set-name, $set-data in $wordsets {
