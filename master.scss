@@ -46,6 +46,7 @@ $main-background-color: black;
 @mixin blue { color: dodgerblue; }
 @mixin brown { color: chocolate; }
 @mixin darkgrey { color: #606060; }
+@mixin DarkOliveGrey{ color: #596F2F; }
 @mixin gold { color: #AA0; }
 @mixin green { color: limegreen; }
 @mixin grey { color: grey; }
@@ -144,6 +145,8 @@ dfn:after {
   color: Khaki;
 }
 dfn:before { @include orange; }
+del > dfn:after { color: DarkCyan; }
+del > dfn:before { @include DarkOliveGrey; }
 
 pre.code-comment {
   @include preformatted-block;
