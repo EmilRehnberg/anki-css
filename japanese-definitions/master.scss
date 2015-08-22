@@ -223,17 +223,28 @@ $words: (
   悪い: (わるい,"１ 人の行動・性質や事物の状態などが水準より劣っているさま。\A２ 人の行動・性質や事物の状態が、正邪・当否の判断基準に達していないさま。","bad"),
 );
 
-@each $word, $definition in $words {
-  dfn##{$word}:before { content: attr(id); }
-  dfn##{$word}:after { content: "〔#{nth($definition, 1)}〕#{nth($definition, 2)}\A"; }
-  dfn.en##{$word}:after { content: "：#{nth($definition, 3)}\A"; }
-  dfn.reading##{$word}:after { content: "〔#{nth($definition, 1)}〕"; }
+// use a map of maps as lists can not contain proper maps
+$wordsets: (
+  words: $words
+);
+@each $set-name, $set-data in $wordsets {
+  @each $word, $definition in $set-data {
+    dfn##{$word}:before { content: attr(id); }
+    dfn##{$word}:after { content: "〔#{nth($definition, 1)}〕#{nth($definition, 2)}\A"; }
+    dfn.en##{$word}:after { content: "：#{nth($definition, 3)}\A"; }
+    dfn.reading##{$word}:after { content: "〔#{nth($definition, 1)}〕"; }
+  }
 }
 
-@each $name, $data in $person-names {
-  dfn##{$name}:hover:after {
-    @include gold;
-    content: "#{$name}〔#{nth($data, 1)}〕#{nth($data, 2)}〈#{nth($data, 3)}〉";
+$namesets: (
+  person-names: $person-names
+);
+@each $set-name, $set-data in $namesets {
+  @each $name, $data in $set-data {
+    dfn##{$name}:hover:after {
+      @include gold;
+      content: "#{$name}〔#{nth($data, 1)}〕#{nth($data, 2)}〈#{nth($data, 3)}〉";
+    }
   }
 }
 
