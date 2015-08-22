@@ -1,16 +1,6 @@
-@import "person-names", "words-a", "words-ka", "words-ga", "words-sa", "words-za", "words-ta", "words-da", "words-na", "words-ha", "words-ba", "words-pa", "words-ma";
+@import "person-names", "words-a", "words-ka", "words-ga", "words-sa", "words-za", "words-ta", "words-da", "words-na", "words-ha", "words-ba", "words-pa", "words-ma", "words-ya";
 
 $words: (
-  悠久: (ゆうきゅう,永遠,"eternity"),
-  優秀: (ゆうしゅう,非常にすぐれていること,"excellence;superiority"),
-  故に: (ゆえに,null,null),
-  油断: (ゆだん,不注意である；警戒を怠る,"be careless, be off (one)'s guard, negligence"),
-  要請: (ようせい,必要だとして、強く願い求めること。「会長就任をーする」,"request"),
-  要素: (ようそ,あるものごとを成り立たせている基本的な内容や条件。成分。要因。,"elements"),
-  様に1: (ように,〜に似て，同様に,"similar to; (light) as (a feather); likewise"),
-  様に2: (ように,〜の通りに,"(I did) as (told)"),
-  様に3: (ように,〜するために,"in order to; for the sake of; so that; as"),
-  ような : (null,例示して,null),
   浪費癖: (ろうひぐせ,金銭をむだに使うくせ,"Extravagant spending habits"),
   六十代: (ろくじゅうだい,null,"sixties"),
   悪い: (わるい,"１ 人の行動・性質や事物の状態などが水準より劣っているさま。\A２ 人の行動・性質や事物の状態が、正邪・当否の判断基準に達していないさま。","bad"),
@@ -30,6 +20,7 @@ $wordsets: (
   ba: $ba,
   pa: $pa,
   ma: $ma,
+  ya: $ya,
   words: $words
 );
 @each $set-name, $set-data in $wordsets {
