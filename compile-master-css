@@ -4,12 +4,13 @@ require 'sass'
 require 'pathname'
 
 class SCSSProcessor
-  SCSS_FILES = ["./master.scss", "./abbreviations.scss", "./japanese-word-definitions.scss"]
+  SCSS_FILES = ["./master.scss", "./abbreviations.scss", "./japanese-definitions/master.scss"]
   OUTPUT_DIR = Pathname.new("~/Documents/Anki/e/collection.media").expand_path
   OUTPUT_FILENAME_BASE = "_master"
   TMP_CONCAT_FILE = "/tmp/concatenated_anki.scss"
 
   def self.run
+    set_load_paths
     build_concatenated_scss_file
     begin
       rm_old_css
@@ -20,6 +21,10 @@ class SCSSProcessor
   end
 
   private
+
+  def self.set_load_paths
+    Sass.load_paths << "./japanese-definitions"
+  end
 
   def self.build_concatenated_scss_file
     File.open(TMP_CONCAT_FILE, 'a') do |concated_file|
