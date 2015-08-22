@@ -1,7 +1,6 @@
-@import "person-names", "words-a", "words-ka", "words-ga", "words-sa", "words-za", "words-ta", "words-da", "words-na", "words-ha", "words-ba", "words-pa", "words-ma", "words-ya", "words-ra";
+@import "person-names", "words-a", "words-ka", "words-ga", "words-sa", "words-za", "words-ta", "words-da", "words-na", "words-ha", "words-ba", "words-pa", "words-ma", "words-ya", "words-ra", "words-wa";
 
 $words: (
-  悪い: (わるい,"１ 人の行動・性質や事物の状態などが水準より劣っているさま。\A２ 人の行動・性質や事物の状態が、正邪・当否の判断基準に達していないさま。","bad"),
 );
 
 // use a map of maps as lists can not contain proper maps
@@ -20,6 +19,7 @@ $wordsets: (
   ma: $ma,
   ya: $ya,
   ra: $ra,
+  wa: $wa,
   words: $words
 );
 @each $set-name, $set-data in $wordsets {
