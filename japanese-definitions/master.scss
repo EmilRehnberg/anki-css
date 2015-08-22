@@ -1,10 +1,6 @@
-@import "person-names", "words-a", "words-ka", "words-ga", "words-sa", "words-za", "words-ta";
+@import "person-names", "words-a", "words-ka", "words-ga", "words-sa", "words-za", "words-ta", "words-da";
 
 $words: (
-  抱く: (だく,持つ,null),
-  脱出: (だっしゅつ,危険な場所や好ましくない状態から抜け出すこと。,"an escape"),
-  同様: (どうよう,同じであること,"same; like"),
-  読書: (どくしょ,本を読むこと。,"reading"),
   内閣: (ないかく,カビネット,"cabinet"),
   半ば1: (なかば,壱：半分,"half"),
   半ば2: (なかば,弐：ある程度,"partly; in part; half; nearly"),
@@ -74,6 +70,7 @@ $wordsets: (
   sa: $sa,
   za: $za,
   ta: $ta,
+  da: $da,
   words: $words
 );
 @each $set-name, $set-data in $wordsets {
