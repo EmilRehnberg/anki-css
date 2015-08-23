@@ -30,10 +30,15 @@ $wordsets: (
 );
 @each $set-name, $set-data in $wordsets {
   @each $word, $definition in $set-data {
+    $reading: if(nth($definition, 1), "〔#{nth($definition, 1)}〕", "：");
+    $ja: nth($definition, 2);
+    $en: nth($definition, 3);
     dfn##{$word}:before { content: attr(id); }
-    dfn##{$word}:after { content: "〔#{nth($definition, 1)}〕#{nth($definition, 2)}\A"; }
-    dfn.en##{$word}:after { content: "：#{nth($definition, 3)}\A"; }
-    dfn.reading##{$word}:after { content: "〔#{nth($definition, 1)}〕"; }
+    dfn##{$word}:after { content: "#{$reading}#{$ja}\A"; }
+    dfn.en##{$word}:after { content: "：#{$en}\A"; }
+    dfn.reading##{$word}:after { content: $reading; }
+    dfn.definition##{$word}:before { content: ""; }
+    dfn.definition##{$word}:after { content: "#{$ja}\A"; }
   }
 }
 

@@ -144,6 +144,7 @@ dfn:after {
   content: attr(id);
   color: Khaki;
 }
+dfn.definition:after { color: LawnGreen; }
 dfn:before { @include orange; }
 del > dfn:after { color: DarkCyan; }
 del > dfn:before { @include DarkOliveGrey; }
