@@ -1,5 +1,4 @@
-@import "person-names",
-  "words-a",
+@import "words-a",
   "words-ka", "words-ga",
   "words-sa", "words-za",
   "words-ta", "words-da",
@@ -39,18 +38,6 @@ $wordsets: (
     dfn.reading##{$word}:after { content: $reading; }
     dfn.definition##{$word}:before { content: ""; }
     dfn.definition##{$word}:after { content: "#{$ja}\A"; }
-  }
-}
-
-$namesets: (
-  person-names: $person-names
-);
-@each $set-name, $set-data in $namesets {
-  @each $name, $data in $set-data {
-    dfn##{$name}:hover:after {
-      @include gold;
-      content: "#{$name}〔#{nth($data, 1)}〕#{nth($data, 2)}〈#{nth($data, 3)}〉";
-    }
   }
 }
 

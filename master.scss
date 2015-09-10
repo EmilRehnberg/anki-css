@@ -145,6 +145,9 @@ dfn:after {
   color: Khaki;
 }
 dfn.definition:after { color: LawnGreen; }
+dfn:hover:after { color: #AA0; }
+dfn.character:hover:after { content: attr(ja); }
+dfn.person:hover:after { content: attr(ja); }
 dfn:before { @include orange; }
 del > dfn:after { color: DarkCyan; }
 del > dfn:before { @include DarkOliveGrey; }
