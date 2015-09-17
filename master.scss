@@ -158,6 +158,7 @@ dfn:before {
   content: attr(ja);
   color: LawnGreen;
 }
+#hint > dfn[ja=""]:after { content: attr(en); }
 #definitions-writer > dfn:after, #namae-writer > dfn:after {
   content: "〔" attr(reading) "〕" attr(ja);
 }
