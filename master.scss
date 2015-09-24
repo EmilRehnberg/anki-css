@@ -165,7 +165,7 @@ dfn:before {
 #definitions-writer dfn[reading=""]:after, #namae-writer[reading=""] dfn:after {
   content: " " attr(ja);
 }
-#eigo-writer dfn:after { content: "：" attr(en); }
+#eigo-writer dfn:after { content: ": " attr(en); }
 #chigai-writer dfn:after { color: DarkCyan; }
 #chigai-writer dfn:before { @include DarkOliveGrey; }
 #reading-writer dfn:after, #chigai-writer dfn:after {
