@@ -153,22 +153,22 @@ dfn:before {
   @include orange;
   content: attr(word);
 }
-#hint > dfn:before { content: ""; }
-#hint > dfn:after {
+#hint dfn:before { content: ""; }
+#hint dfn:after {
   content: attr(ja);
   color: LawnGreen;
 }
-#hint > dfn[ja=""]:after { content: attr(en); }
-#definitions-writer > dfn:after, #namae-writer > dfn:after {
+#hint dfn[ja=""]:after { content: attr(en); }
+#definitions-writer dfn:after, #namae-writer dfn:after {
   content: "〔" attr(reading) "〕" attr(ja);
 }
-#definitions-writer > dfn[reading=""]:after, #namae-writer[reading=""] > dfn:after {
+#definitions-writer dfn[reading=""]:after, #namae-writer[reading=""] dfn:after {
   content: " " attr(ja);
 }
-#eigo-writer > dfn:after { content: "：" attr(en); }
-#chigai-writer > dfn:after { color: DarkCyan; }
-#chigai-writer > dfn:before { @include DarkOliveGrey; }
-#reading-writer > dfn:after, #chigai-writer > dfn:after {
+#eigo-writer dfn:after { content: "：" attr(en); }
+#chigai-writer dfn:after { color: DarkCyan; }
+#chigai-writer dfn:before { @include DarkOliveGrey; }
+#reading-writer dfn:after, #chigai-writer dfn:after {
   content: if(attr(reading), "〔" attr(reading) "〕", "");
 }
 
