@@ -90,13 +90,17 @@ $main-background-color: black;
   color: oldlace;
 }
 
+@mixin wrap-content {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+}
+
 @mixin preformatted-block {
   @include code-background-color;
   @include code-font-size;
   @include no-margin-padding;
-  white-space: pre-wrap;
-  white-space: -moz-pre-wrap;
-  white-space: -o-pre-wrap;
+  @include wrap-content;
 }
 
 // HTML tags
@@ -138,7 +142,7 @@ cite.ja { @include normal-style; }
 dfn {
   @include normal-style;
   color: LawnGreen;
-  white-space:pre-wrap;
+  @include wrap-content;
 }
 dfn:after {
   color: Khaki;
@@ -324,6 +328,7 @@ dl dt#kunyomi { // 訓読み
 }
 
 // dd tags styling
+dd { @include wrap-content; }
 dl.dialogue dd { margin: 0 0 0 0.2em; }
 dl.dialogue dd:after {
   content: "」";
