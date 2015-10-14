@@ -425,6 +425,7 @@ code pre, samp pre { @include preformatted-block; }
 samp {
   @include grey;
 }
+samp.error { @include red; }
 
 // classes
 .card {
