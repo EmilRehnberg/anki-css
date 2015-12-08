@@ -161,11 +161,13 @@ dfn:before {
 }
 dfn.character { color: #FF0; }
 dfn.character:after { color: #AA0; }
+dfn.entity { color: #0B0; }
+dfn.entity:after { color: #080; }
 dfn.location { color: #8CF; }
 dfn.location:after { color: #59B; }
 dfn.person { color: #0F9; }
 dfn.person:after { color: #0A5; }
-@each $nameClass in character, location, person {
+@each $nameClass in character, location, person, entity {
   dfn.#{$nameClass}:hover:after { content: "〔" attr(reading) "〕" attr(ja) "〈" attr(tag) "〉"; }
   dfn.#{$nameClass}:hover:after[reading=""] { content: attr(ja) "〈" attr(tag) "〉"; }
 }
