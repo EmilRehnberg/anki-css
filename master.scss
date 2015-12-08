@@ -125,6 +125,12 @@ input {
   @include center;
   @include scaled-size(2);
 }
+input#typeans {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 2em;
+}
 
 sub {
   @include purple;
