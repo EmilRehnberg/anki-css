@@ -315,7 +315,13 @@ dt {
   @include normal-style;
   @include green;
 }
-dl.dialogue dt { @include grey; }
+dl.dialogue dt {
+  @include grey;
+  @include code-font-size;
+  @include inline-display;
+  margin-right: 0.2em;
+  margin-left: -1.2em;
+}
 dl.dialogue dfn { @include grey; }
 dl.stack dt {
   @include no-float;
@@ -343,14 +349,14 @@ dl dt#kunyomi { // 訓読み
 
 // dd tags styling
 dd { @include wrap-content; }
-dl.dialogue dd { margin: 0 0 0 0.2em; }
-dl.dialogue dd:after {
-  content: "」";
-  @include darkgrey;
+dl.dialogue dd {
+  @include inline-display;
+  @include no-float;
+  @include no-margin-padding;
 }
-dl.dialogue dd:before {
-  content: "「";
-  @include darkgrey;
+dl.dialogue dd:after {
+  content: "\a";
+  white-space: pre;
 }
 dl.stack dd {
   @include no-float;
