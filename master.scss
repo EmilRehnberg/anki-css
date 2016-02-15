@@ -303,6 +303,12 @@ dl.with-fields dt {
   @include grey;
   @include small-font;
 }
+dl.back-only { display: none; }
+div.back dl.back-only { display: block; }
+dd#onpu:after {
+  color: gold;
+  content: "〈"attr(title)"〉";
+}
 
 // dt tags styling
 dt {
