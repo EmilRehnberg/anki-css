@@ -286,7 +286,10 @@ h6:before {
 ul, ol { @include scaled-margins(0.2); }
 
 // nested ordered list numbering
-ol { counter-reset: item; }
+ol {
+  counter-reset: item;
+  list-style-type: cjk-heavenly-stem;
+}
 ol > li { counter-increment: item; }
 ol ol > li { display: block; }
 ol ol > li:before {
