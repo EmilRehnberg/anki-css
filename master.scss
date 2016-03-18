@@ -318,8 +318,13 @@ dl.dialogue dt {
   @include grey;
   @include code-font-size;
   @include inline-display;
-  margin-right: 0.2em;
-  margin-left: -1.2em;
+  float: right;
+  text-align: right;
+  writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  -ms-writing-mode: vertical-rl;
+  -moz-writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
 }
 dl.dialogue dfn { @include grey; }
 dl.stack dt {
@@ -356,6 +361,10 @@ dl.dialogue dd {
 dl.dialogue dd:after {
   content: "\a";
   white-space: pre;
+}
+dl.dialogue dd:before {
+  content: "-";
+  @include darkgrey;
 }
 dl.stack dd {
   @include no-float;
