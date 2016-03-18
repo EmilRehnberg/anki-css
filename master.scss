@@ -105,7 +105,6 @@ $main-background-color: black;
 
 // HTML tags
 a { @include blue; }
-img { background-color: White; }
 kbd { @include contrast2; }
 summary { color: DarkGoldenRod; }
 time { color: Fuchsia; }
@@ -389,6 +388,14 @@ figure img { display: table; }
 figcaption {
   @include small-font;
   position: static;
+}
+
+img { background-color: White; }
+p.context-images img {
+  width: auto;
+  height: auto;
+  max-width: 160px;
+  max-height: 160px;
 }
 
 // span tags
