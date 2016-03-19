@@ -284,11 +284,17 @@ h6:before {
 
 // Lists
 ul, ol { @include scaled-margins(0.2); }
+ul {
+  list-style-type: cjk-heavenly-stem;
+  padding-left: 1em;
+  text-indent: -0.4em;
+}
+ul ul { list-style-type: cjk-earthly-branch; }
 
 // nested ordered list numbering
 ol {
   counter-reset: item;
-  list-style-type: cjk-heavenly-stem;
+  list-style-type: hiragana-iroha;
 }
 ol > li { counter-increment: item; }
 ol ol > li { display: block; }
