@@ -173,7 +173,12 @@ dfn.person:after { color: #0A5; }
 #namae-writer dfn:after { content: "〔" attr(reading) "〕"; }
 #namae-writer dfn:hover:after { content: " " attr(ja) "〈" attr(tag) "〉"; }
 #hint dfn:before { content: ""; }
+#writing-hint dfn:before { content: "〔" attr(reading) "〕"; }
 #hint dfn:after {
+  content: attr(ja);
+  color: LawnGreen;
+}
+#writing-hint dfn:after {
   content: attr(ja);
   color: LawnGreen;
 }
