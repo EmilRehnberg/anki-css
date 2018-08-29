@@ -193,6 +193,22 @@ dfn.person:after { color: #0A5; }
 #reading-writer dfn:after, #chigai-writer dfn:after {
   content: if(attr(reading), "〔" attr(reading) "〕", "");
 }
+dfn.sanskrit { color: #0F9; }
+dfn.sanskrit:after { color: #0A5; }
+dfn.sanskrit:hover:after { content: "〔" attr(iast) "〕" attr(definition) " ETYMOLOGY " attr(etymology) ; }
+dfn[etymology=""].sanskrit:hover:after { content: "〔" attr(iast) "〕" attr(definition) ; }
+dfn.sanskrit:before { content: ""; }
+#devanagari dfn.sanskrit, #iast dfn.sanskrit, #definition dfn.sanskrit {
+  color: #000;
+  font-size: 0.01em;
+}
+#devanagari dfn.sanskrit:after, #iast dfn.sanskrit:after, #definition dfn.sanskrit:after {
+  color: #0F9;
+  font-size: 100em;
+}
+#devanagari dfn.sanskrit:after { content: attr(word) }
+#iast dfn.sanskrit:after { content: attr(iast) }
+#definition dfn.sanskrit:after { content: attr(definition) }
 
 pre.code-comment {
   @include preformatted-block;
