@@ -1,0 +1,33 @@
+span.comment { color: $grey; }
+span.error { color: $red; } // エッラー
+
+code,
+samp { @include codelike; }
+
+code pre,
+samp pre { @include preformatted-block; }
+
+samp {
+  color: $grey;
+  &.error { color: $red; }
+}
+
+pre.code-comment {
+  @include preformatted-block;
+  background-color: $black;
+  color: violet;
+}
+
+pre.small { @include scaled-size(0.52); }
+pre.tiny { @include scaled-size(0.28); }
+
+var {
+  @include normal-style;
+  color: navajowhite;
+}
+
+var.code {
+  @include monospace;
+  @include code-background-color;
+  font-size: .8em;
+}
