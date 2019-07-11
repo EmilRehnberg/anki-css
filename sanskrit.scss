@@ -1,0 +1,61 @@
+:lang(sa) {
+  color: $orange;
+  font-family: 'Sanskrit 2003';
+
+  * { font-size: inherit; }
+  ol { list-style-type: devanagari; }
+
+  .correct-answer { text-decoration: initial; }
+
+  &.example { font-size: 32px; }
+  &.main-term { font-size: 48px; }
+}
+
+:lang(en) {
+  font-family: Gentium;
+  font-size: 20px;
+  text-align: center;
+
+  * { font-size: inherit; }
+
+  &.example { font-size: 24px; }
+  &.main-term { font-size: 44px;}
+  &.example,
+  &.main-term { color: $light-slate-blue; }
+}
+
+dfn {
+  &:lang(sa) {
+    color: $spring-green;
+
+    &[etymology=""]:hover::after { content: '〔' attr(iast) '〕' attr(definition); }
+    &:hover::after {
+      color: $light-olive;
+      content: '〔' attr(iast) '〕' attr(definition) ' ETYMOLOGY ' attr(etymology);
+    }
+
+    &::before { content: ''; }
+    &::after { color: $sea-green; }
+  }
+}
+
+.column-flex-table td::before {
+  &[title="partspeech"] { content: 'Part of Speech'; }
+}
+
+.devanagari dfn:lang(sa)::after { content: attr(word); }
+.iast dfn:lang(sa)::after { content: attr(iast); }
+.definition dfn:lang(sa)::after { content: attr(definition); }
+.devanagari,
+.iast,
+.definition {
+  dfn:lang(sa) {
+    color: $black;
+    font-size: .01em;
+
+    &::after {
+      color: $spring-green;
+      font-size: 100em;
+    }
+  }
+}
