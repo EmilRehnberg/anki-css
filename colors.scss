@@ -1,0 +1,69 @@
+// grey scale
+$black: #000;
+$dark-grey: #222;
+$light-grey: #606060;
+$dim-grey: #696969;
+$grey: #808080;
+$silver: #ccc;
+$white: #fff;
+$oldlace: #fdf5e6;
+// gray names
+$dark-gray: $dark-grey;
+$light-gray: $light-grey;
+$dim-gray: $dim-grey;
+$gray: $grey;
+
+// cyan scale
+$sea-green: #0a5;
+$turquoise: #40e0d0;
+$medium-spring-green: #00fa9a;
+$spring-green: #0f9;
+$aqua-marine: #7fffd4;
+$dark-cyan: #008b8b;
+$cyan: #0ff;
+
+// yellow scale
+$light-olive: #aa0;
+$dark-golden-rod: #b8860b;
+$gold: #ffd700;
+$dark-orange: #ff8c00;
+$orange: #ffa500;
+$brown: #d2691e; // aka. chocolate
+$yellow: #ff0;
+$dark-olive-grey: #596f2f;
+$khaki: #f0e68c;
+
+// lime scale
+$green: #008000;
+$green1: #0b0;
+$lime: #0f0;
+$lime-green: #0f0;
+$lawn-green: #7cfc00;
+
+// blue-ish stuff
+$steel-blue: #59b;
+$indigo: #4b0082;
+$light-sky-blue: #87cefa;
+$light-royal-blue: #55f;
+$light-slate-blue: #aaf;
+$purple: #9932cc; // aka darkorchid
+$blue: #1e90ff; // aka dodgerblue
+$fuchsia: #f0f;
+
+// red scale
+$red: #f00;
+$dark-red: #8b0000;
+$tomato: #ff6347;
+$crimson: #dc143c;
+
+// chakras; colors & classes
+$smokey-purple: #9351d0;
+$fire-red: #ce2029;
+$storm-black-blue: #0a44bf;
+$orange-red: #ff4500;
+$crimson-red: #900;
+.smokey-purple { color: $smokey-purple; }
+.fire-red { color: $fire-red; }
+.storm-black-blue { color: $storm-black-blue; }
+.orange-red { color: $orange-red; }
+.crimson-red { color: $crimson-red; }
