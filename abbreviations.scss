@@ -1,4 +1,5 @@
 $abbreviations: (
+  acf: "auto-correlation function",
   aes: "advanced encryption standard",
   aic: "akaike's information criterion",
   alpn: "application layer protocol negotiation",
@@ -51,6 +52,8 @@ $abbreviations: (
   lm: "linear model",
   loocv: "leave one out cross validation",
   ls: "least squares",
+  mae: "Mean absolute error",
+  mape: "Mean absolute percentage error",
   mcmc: "markov chain monte carlo",
   ms: "mean square",
   mse: "mean squared error",
@@ -64,6 +67,7 @@ $abbreviations: (
   ova: "one vs all",
   ovo: "one vs one",
   okc: "open kinetic chain",
+  pb: "probability distribution",
   pca: "prinicipal component analysis",
   pcc: "pearson's correlation coefficient",
   pcr: "prinicipal component regression",
@@ -79,6 +83,7 @@ $abbreviations: (
   rest: "representation state transfer",
   rf: "random forest",
   rhs: "right hand side",
+  rmse: "Root mean squared error",
   roc: "receiver operating characteristic",
   rse: "residual standard error",
   rss: "residual sum of squares",
@@ -94,6 +99,7 @@ $abbreviations: (
   tcp: "transfer control protocol",
   tds: "teX directory structure",
   tls: "transfer layer security",
+  ts: "time series",
   tss: "total sum of squares",
   udp: "user datagram protocol",
   xargs: "execute (as) arguments",
@@ -101,5 +107,7 @@ $abbreviations: (
 );
 
 @each $abbreviation, $expression in $abbreviations {
-  abbr##{$abbreviation}:hover:after { content: $expression; }
+  abbr##{$abbreviation}:hover:after {
+    content: $expression;
+  }
 }
