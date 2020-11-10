@@ -1,18 +1,48 @@
 %zhong-wen-tones {
-  &.tone1 { color: $red; }
-  &.tone2 { color: $dark-orange; }
-  &.tone3 { color: $lime; }
-  &.tone4 { color: $light-royal-blue; }
-  &.tone5 { color: $silver; }
+  &.tone1 {
+    color: $red;
+  }
+  &.tone2 {
+    color: $dark-orange;
+  }
+  &.tone3 {
+    color: $lime;
+  }
+  &.tone4 {
+    color: $light-royal-blue;
+  }
+  &.tone5 {
+    color: $silver;
+  }
 }
 
-span { @extend %zhong-wen-tones;}
+span {
+  @extend %zhong-wen-tones;
+}
 
 // :lang(zh) { font-family: ; }
-:lang(zh-Hant) { font-family: 'PMingLiU', 'MingLiU', 'Kai','KaiTi','serif'; }
-:lang(zh-Hans) { font-family: 'SimSum-18030', 'SimHei','DFKai-SB','BiauKai','serif'; }
-:lang(zh-TW) { font-family: 'PMingLiU', 'MingLiU', 'Kai','KaiTi','serif'; }
+:lang(zh-Hant) {
+  font-family: "PMingLiU", "MingLiU", "Kai", "KaiTi", "serif";
+}
+:lang(zh-Hans) {
+  font-family: "SimSum-18030", "SimHei", "DFKai-SB", "BiauKai", "serif";
+}
+:lang(zh-TW) {
+  font-family: "PMingLiU", "MingLiU", "Kai", "KaiTi", "serif";
+}
 
-:lang(zh) {
-  .correct-answer { text-decoration: initial; }
+:lang(zh-Hant),
+:lang(zh-Hans) {
+  .correct-answer {
+    text-decoration: initial;
+  }
+
+  q {
+    quotes: "「" "」" "『" "』";
+
+    &::before,
+    &::after {
+      color: $aqua-marine;
+    }
+  }
 }
