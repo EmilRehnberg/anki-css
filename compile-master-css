@@ -6,7 +6,6 @@ require 'pathname'
 # main class to be run for compile the CSS and moving it to Anki
 class SCSSProcessor
   SCSS_FILES = ["./colors.scss", "./master.scss", "./abbreviations.scss", "./column-flex-table.scss", "./code.scss", "./japanese.scss", "./sanskrit.scss", "./chinese.scss", "./english.scss", "./nullify-ankidroid-night-mode.scss"]
-  OUTPUT_DIR = Pathname.new("~/Library/Application Support/Anki2/e/collection.media").expand_path
   OUTPUT_FILENAME_BASE = "_master"
   TMP_CONCAT_FILE = "/tmp/concatenated_anki.scss"
 
@@ -64,7 +63,22 @@ class SCSSProcessor
   end
 
   def self.anki_css_filepath(filepath_append = "")
-    OUTPUT_DIR + (OUTPUT_FILENAME_BASE + "#{filepath_append}.css")
+    output_dir + (OUTPUT_FILENAME_BASE + "#{filepath_append}.css")
+  end
+
+  def self.output_dir
+    programs_data_dir + "Anki2/e/collection.media"
+  end
+
+  def self.programs_data_dir
+    os_category = `uname -a`.split(" ").first
+    if os_category == "Linux"
+      Pathname.new("~/.local/share/").expand_path
+    elsif os_category == "Darwin"
+      Pathname.new("~/Library/Application Support/").expand_path
+    else
+      raise NotImplementedError, "finding the anki data dir is only implemented for Mac and Linux"
+    end
   end
 end
 
